@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil - Edgar Arteaga</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .badge-neon {
+            background-color: #121212;
+            color: #ffffff;
+            border: 1.5px solid #2d3748;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.15), inset 0 0 8px rgba(255, 255, 255, 0.05);
+            letter-spacing: 0.5px;
+        }
+        .btn-card {
+            transition: all 0.25s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .btn-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+            border-color: #000000;
+        }
+        .avatar-shadow {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-light min-vh-100 d-flex flex-column">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">5A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./estudiantes.html">Estudiantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border text-center">
+                    
+                    <img src="https://i.pinimg.com/736x/64/18/c2/6418c2f8cfdf108f3756263943527c25.jpg" 
+                         alt="Foto de Edgar Arteaga" 
+                         class="rounded-circle mb-3 avatar-shadow" 
+                         style="width: 120px; height: 120px; object-fit: cover;">
+
+                    <h3 class="fw-bold text-dark mb-2">Edgar Arteaga</h3>
+                    <div class="d-flex justify-content-center mb-4">
+                        <span class="badge badge-neon px-3 py-2 rounded-pill fw-semibold" style="font-size: 0.85rem;">
+                            <i class="bi bi-code-slash me-1"></i> Ingeniería de Software · 5to Semestre
+                        </span>
+                    </div>
+
+                    <div class="text-start mb-4">
+                        <h6 class="fw-bold text-uppercase text-muted small mb-2">Sobre mí</h6>
+                        <p class="text-secondary small lh-base">
+                            Estudiante de Ingeniería de Software enfocado en el desarrollo web y la lógica Backend. Interesado en el diseño seguro de bases de datos con PostgreSQL y explorando el ámbito del desarrollo de videojuegos.
+                        </p>
+                    </div>
+
+                    <div class="row g-2 mb-4 text-start">
+                        <div class="col-6">
+                            <div class="p-3 bg-light rounded-3 btn-card h-100">
+                                <i class="bi bi-database-lock fs-5 text-dark mb-1 d-block"></i>
+                                <span class="fw-bold d-block text-dark small">Bases de Datos</span>
+                                <small class="text-muted" style="font-size: 0.75rem;">Seguridad en PostgreSQL</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-light rounded-3 btn-card h-100">
+                                <i class="bi bi-controller fs-5 text-dark mb-1 d-block"></i>
+                                <span class="fw-bold d-block text-dark small">Game Dev</span>
+                                <small class="text-muted" style="font-size: 0.75rem;">Juegos 2D / 3D & Fútbol</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-start mb-4">
+                        <h6 class="fw-bold text-uppercase text-muted small mb-2">Proyecto Electiva I</h6>
+                        <div class="p-3 bg-light rounded-3 border-start border-3 border-dark btn-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold text-dark small"><i class="bi bi-cpu me-1"></i> PetCare</span>
+                                <span class="badge bg-dark text-white" style="font-size: 0.65rem;">Backend</span>
+                            </div>
+                            <p class="text-muted small mb-0">
+                                Estructuración de la arquitectura del lado del servidor y manejo eficiente de datos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-top">
+                        <h6 class="fw-bold text-uppercase text-muted small mb-3 text-start">Contacto</h6>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                            <a href="https://github.com/EdedArt" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm d-inline-flex align-items-center gap-2 fw-semibold px-3">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            <a href="https://www.instagram.com/edgararteaga06/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm d-inline-flex align-items-center gap-2 fw-semibold px-3">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                            <a href="mailto:edgar20arteaga06@gmail.com" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 fw-semibold px-3">
+                                <i class="bi bi-envelope-fill"></i> Correo
+                            </a>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <a href="./estudiantes.html" class="btn btn-dark btn-sm fw-bold px-4">
+                                Regresar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
