@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FoodBridge API | Proyectos 5A</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        :root {
+            --foodbridge-green: #198754;
+            --foodbridge-dark-green: #0f5132;
+            --foodbridge-light: #eaf7ef;
+            --foodbridge-orange: #fd7e14;
+            --foodbridge-dark: #202a25;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(25, 135, 84, 0.10), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(253, 126, 20, 0.08), transparent 30%),
+                #f8faf9;
+
+            min-height: 100vh;
+            color: var(--foodbridge-dark);
+        }
+
+        /* Navbar */
+
+        .foodbridge-navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(25, 135, 84, 0.12);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+        }
+
+        .navbar-brand span {
+            color: var(--foodbridge-green);
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--foodbridge-green);
+        }
+
+        /* Contenedor principal */
+
+        .project-container {
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(25, 135, 84, 0.08);
+        }
+
+        /* Hero */
+
+        .foodbridge-hero {
+            position: relative;
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f5132 0%,
+                    #198754 55%,
+                    #249c66 100%
+                );
+
+            color: white;
+            padding: 3rem 2rem;
+            overflow: hidden;
+        }
+
+        .foodbridge-hero::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            top: -120px;
+            right: -80px;
+        }
+
+        .foodbridge-hero::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(253, 126, 20, 0.22);
+            bottom: -100px;
+            left: -50px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Logo */
+
+        .foodbridge-logo {
+            width: 100px;
+            height: 100px;
+
+            margin: 0 auto 1.5rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 28px;
+
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            backdrop-filter: blur(8px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .foodbridge-logo i {
+            font-size: 3rem;
+        }
+
+        .project-title {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .api-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            padding: 0.55rem 1rem;
+            border-radius: 50px;
+
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: 1.5rem auto 0;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Información */
+
+        .info-section {
+            padding: 2.5rem;
+        }
+
+        .section-label {
+            color: var(--foodbridge-green);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .feature-card {
+            height: 100%;
+            padding: 1.5rem;
+
+            border-radius: 18px;
+
+            background: white;
+            border: 1px solid #e9efeb;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(25, 135, 84, 0.3);
+
+            box-shadow:
+                0 15px 35px rgba(25, 135, 84, 0.10);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: var(--foodbridge-light);
+            color: var(--foodbridge-green);
+
+            font-size: 1.35rem;
+
+            margin-bottom: 1rem;
+        }
+
+        /* Integrantes */
+
+        .member-card {
+            height: 100%;
+
+            border: 1px solid #e9efeb;
+            border-radius: 20px;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(0, 0, 0, 0.09);
+        }
+
+        .member-avatar {
+            width: 105px;
+            height: 105px;
+
+            margin: 1.5rem auto 1rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--foodbridge-green),
+                    var(--foodbridge-dark-green)
+                );
+
+            border: 5px solid var(--foodbridge-light);
+
+            color: white;
+
+            font-size: 2rem;
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 20px rgba(25, 135, 84, 0.2);
+        }
+
+        .member-role {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .profile-button {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--foodbridge-green),
+                    var(--foodbridge-dark-green)
+                );
+
+            color: white;
+
+            border: none;
+            border-radius: 10px;
+
+            font-weight: 600;
+
+            transition: all 0.2s ease;
+        }
+
+        .profile-button:hover {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--foodbridge-dark-green),
+                    #093b23
+                );
+
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Repositorio */
+
+        .repository-box {
+            background: #f7faf8;
+
+            border: 1px solid #e4ece7;
+            border-radius: 20px;
+
+            padding: 2rem;
+        }
+
+        .github-button {
+            width: 60px;
+            height: 60px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #212529;
+            color: white;
+
+            font-size: 1.6rem;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .github-button:hover {
+            color: white;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botón regresar */
+
+        .back-button {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--foodbridge-orange),
+                    #e86608
+                );
+
+            border: none;
+            border-radius: 12px;
+
+            color: white;
+
+            font-weight: 600;
+
+            padding: 0.7rem 1.5rem;
+        }
+
+        .back-button:hover {
+            color: white;
+            background:
+                linear-gradient(
+                    135deg,
+                    #e86608,
+                    #c95400
+                );
+        }
+
+        @media (max-width: 767px) {
+            .foodbridge-hero {
+                padding: 2.5rem 1.25rem;
+            }
+
+            .info-section {
+                padding: 1.5rem;
+            }
+
+            .project-title {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg foodbridge-navbar sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                <span>5A</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Abrir menú"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto gap-lg-3">
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="../proyectos.html"
+                        >
+                            <i class="bi bi-grid me-1"></i>
+                            Proyectos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="../estudiantes.html"
+                        >
+                            <i class="bi bi-people me-1"></i>
+                            Estudiantes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Contenido -->
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-xl-11">
+
+                <div class="project-container bg-white shadow-lg">
+
+                    <!-- HERO -->
+                    <section class="foodbridge-hero text-center">
+
+                        <div class="hero-content">
+
+                            <!-- Logo temporal creado con Bootstrap Icons -->
+                            <div class="foodbridge-logo">
+                                <i class="bi bi-basket2-fill"></i>
+                            </div>
+
+                            <div class="mb-3">
+
+                                <span class="api-badge">
+                                    <i class="bi bi-code-slash"></i>
+                                    RESTful API
+                                </span>
+
+                            </div>
+
+                            <h1 class="project-title mb-2">
+                                FoodBridge API
+                            </h1>
+
+                            <h2 class="fs-5 fw-semibold mb-0">
+                                Conectando excedentes de alimentos con quienes los necesitan
+                            </h2>
+
+                            <p class="hero-description">
+
+                                FoodBridge API conecta restaurantes, panaderías,
+                                supermercados y otros establecimientos con personas,
+                                fundaciones y bancos de alimentos para reducir el
+                                desperdicio de comida.
+
+                                La plataforma permite publicar alimentos disponibles
+                                para donación o venta a bajo costo, registrando
+                                información como ubicación, cantidad, estado y tiempo
+                                de disponibilidad, facilitando que los productos sean
+                                aprovechados antes de que se pierdan.
+
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- FUNCIONALIDADES -->
+                    <section class="info-section">
+
+                        <div class="text-center mb-4">
+
+                            <span class="section-label">
+                                Nuestra propuesta
+                            </span>
+
+                            <h3 class="fw-bold mt-2">
+                                Tecnología con impacto social
+                            </h3>
+
+                            <p class="text-muted mx-auto">
+                                FoodBridge busca crear un puente digital entre los
+                                establecimientos que tienen alimentos disponibles
+                                y quienes pueden aprovecharlos.
+                            </p>
+
+                        </div>
+
+
+                        <div class="row g-3 mb-5">
+
+                            <!-- Publicaciones -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+
+                                    <h5 class="fw-bold">
+                                        Publicaciones
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+                                        Los establecimientos pueden registrar alimentos
+                                        disponibles indicando cantidad y estado.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Ubicación -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+
+                                    <h5 class="fw-bold">
+                                        Ubicación
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+                                        Permite conocer dónde se encuentran los alimentos
+                                        disponibles para facilitar su entrega o recogida.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Tiempo -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+
+                                    <h5 class="fw-bold">
+                                        Disponibilidad
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+                                        Cada publicación indica cuánto tiempo permanecerá
+                                        disponible el alimento antes de ser retirado.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Donación -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </div>
+
+                                    <h5 class="fw-bold">
+                                        Donar o vender
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+                                        Los productos pueden ofrecerse como donación
+                                        o mediante venta a bajo costo.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INTEGRANTES -->
+
+                        <div class="border-top pt-5">
+
+                            <div class="text-center mb-4">
+
+                                <span class="section-label">
+                                    Equipo
+                                </span>
+
+                                <h3 class="fw-bold mt-2">
+                                    Integrantes del proyecto
+                                </h3>
+
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+
+                                <!-- Luis Sebastián Díaz -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <div class="member-avatar">
+                                            LD
+                                        </div>
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+                                                Luis Sebastián Díaz
+                                            </h5>
+
+                                            <p class="member-role">
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+                                            </p>
+
+                                            <a
+                                                href="../estudiantes/perfil-luis-diaz.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+                                                Ver perfil
+                                                <i class="bi bi-arrow-right ms-1"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- David Andrés Cabrera -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <div class="member-avatar">
+                                            DC
+                                        </div>
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+                                                David Andrés Cabrera
+                                            </h5>
+
+                                            <p class="member-role">
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+                                            </p>
+
+
+                                            <!-- Redes de David -->
+                                            <div class="d-flex justify-content-center gap-2 mb-3">
+
+                                                <a
+                                                    href="https://github.com/David-Cabrera00"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-dark btn-sm rounded-circle"
+                                                    aria-label="GitHub de David Cabrera"
+                                                >
+                                                    <i class="bi bi-github"></i>
+                                                </a>
+
+                                                <a
+                                                    href="https://www.linkedin.com/in/david-cabrera-209a4a407/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-primary btn-sm rounded-circle"
+                                                    aria-label="LinkedIn de David Cabrera"
+                                                >
+                                                    <i class="bi bi-linkedin"></i>
+                                                </a>
+
+                                                <a
+                                                    href="https://www.instagram.com/david.cabrera__/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                                    aria-label="Instagram de David Cabrera"
+                                                >
+                                                    <i class="bi bi-instagram"></i>
+                                                </a>
+
+                                            </div>
+
+
+                                            <a
+                                                href="../estudiantes/perfil-david-cabrera.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+                                                Ver perfil
+                                                <i class="bi bi-arrow-right ms-1"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Jorge Alejandro Parra -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <div class="member-avatar">
+                                            JP
+                                        </div>
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+                                                Jorge Alejandro Parra
+                                            </h5>
+
+                                            <p class="member-role">
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+                                            </p>
+                                            
+                                            <!-- Redes de Jorge -->
+                                            <div class="d-flex justify-content-center gap-2 mb-3">
+
+                                                <a
+                                                    href="https://github.com/AlePython-byte"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-dark btn-sm rounded-circle"
+                                                    aria-label="GitHub de Jorge Parra"
+                                                >
+                                                    <i class="bi bi-github"></i>
+                                                </a>
+
+                                                <a
+                                                    href="https://www.linkedin.com/in/alejandro-parra-91ab55319/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-primary btn-sm rounded-circle"
+                                                    aria-label="LinkedIn de Jorge Parra"
+                                                >
+                                                    <i class="bi bi-linkedin"></i>
+                                                </a>
+
+                                            </div>
+
+                                            <a
+                                                href="../estudiantes/perfil-alejandro.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+                                                Ver perfil
+                                                <i class="bi bi-arrow-right ms-1"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Danilo Lara -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <div class="member-avatar">
+                                            DL
+                                        </div>
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+                                                Danilo Lara
+                                            </h5>
+
+                                            <p class="member-role">
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+                                            </p>
+
+                                            <a
+                                                href="../estudiantes/perfil-danilo-lara.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+                                                Ver perfil
+                                                <i class="bi bi-arrow-right ms-1"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REPOSITORIO -->
+                        <div class="repository-box text-center mt-5">
+
+                            <span class="section-label">
+                                Código fuente
+                            </span>
+
+                            <h4 class="fw-bold mt-2 mb-2">
+                                Repositorio de FoodBridge API
+                            </h4>
+
+                            <p class="text-muted mb-4">
+                                Consulta el código fuente y el desarrollo del proyecto
+                                desde nuestro repositorio de GitHub.
+                            </p>
+
+
+                            <!--
+                                IMPORTANTE:
+                                Cuando tengan el repositorio,
+                                reemplaza # por la URL.
+                            -->
+
+                            <a
+                                href="#"
+                                class="github-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Repositorio de FoodBridge API"
+                            >
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                        </div>
+
+
+                        <!-- REGRESAR -->
+                        <div class="text-center mt-5 pt-4 border-top">
+
+                            <a
+                                href="../proyectos.html"
+                                class="btn back-button"
+                            >
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Regresar a proyectos
+                            </a>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
