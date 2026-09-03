@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SiGanado | Gestión Ganadera</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #198754, #0d6efd);
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 20px;
+        }
+
+        .info-card {
+            border: none;
+            border-radius: 18px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+        }
+
+        .member-card {
+            border: none;
+            border-radius: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-icon {
+            font-size: 65px;
+        }
+
+        .section-title {
+            font-weight: 700;
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="./index.html">
+                5A
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Mostrar navegación">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proyectos.html">
+                            Proyectos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./estudiantes.html">
+                            Estudiantes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero py-5">
+
+        <div class="container text-center">
+
+            <i class="bi bi-bar-chart-line-fill hero-icon"></i>
+
+            <h1 class="display-4 fw-bold mt-3">
+                SiGanado
+            </h1>
+
+            <p class="lead mb-0">
+                Sistema de Gestión y Control de Animales
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="container py-5">
+
+        <!-- DESCRIPCIÓN -->
+        <section class="mb-5">
+
+            <div class="card project-card shadow-lg">
+
+                <div class="card-body p-4 p-md-5">
+
+                    <h2 class="section-title mb-4">
+                        <i class="bi bi-info-circle-fill text-success me-2"></i>
+                        Descripción del proyecto
+                    </h2>
+
+                    <p class="text-muted">
+                        SiGanado es un sistema de software diseñado para
+                        facilitar la gestión y control de animales en
+                        explotaciones ganaderas.
+                    </p>
+
+                    <p class="text-muted">
+                        La plataforma permite al ganadero registrar y consultar
+                        información individual de cada animal, como identificación,
+                        raza, edad, peso, estado de salud, vacunaciones,
+                        alimentación y antecedentes.
+                    </p>
+
+                    <p class="text-muted mb-0">
+                        El sistema busca centralizar la información del ganado
+                        y facilitar su seguimiento, permitiendo mejorar el
+                        control de los animales y apoyar la toma de decisiones
+                        dentro de la explotación ganadera.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUNCIONALIDADES -->
+        <section class="mb-5">
+
+            <h2 class="section-title text-center mb-4">
+                Funcionalidades principales
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card shadow-sm h-100 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-clipboard-data-fill text-success fs-1"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Registro
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Registro de información individual de cada animal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card shadow-sm h-100 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-heart-pulse-fill text-danger fs-1"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Salud
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Seguimiento del estado de salud del ganado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card shadow-sm h-100 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-shield-check text-primary fs-1"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Vacunación
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Control de vacunas y antecedentes sanitarios.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card shadow-sm h-100 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-graph-up-arrow text-warning fs-1"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Seguimiento
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Consulta y seguimiento de la información del ganado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTEGRANTES -->
+        <section class="mb-5">
+
+            <h2 class="section-title text-center mb-4">
+                <i class="bi bi-people-fill text-success me-2"></i>
+                Integrantes del proyecto
+            </h2>
+
+            <div class="row g-4">
+
+
+                <!-- KEVIN -->
+                <div class="col-md-4">
+
+                    <div class="card member-card shadow-sm h-100">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-person-circle member-icon text-secondary"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Kevin Martinez
+                            </h3>
+
+                            <p class="text-muted">
+                                Estudiante de Ingeniería de Software.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GABRIELA -->
+                <div class="col-md-4">
+
+                    <div class="card member-card shadow-sm h-100">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-person-circle member-icon text-secondary"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Gabriela Benitez
+                            </h3>
+
+                            <p class="text-muted">
+                                Estudiante de Ingeniería de Software.
+                            </p>
+
+                            <a
+                                href="./perfil-gabriela.html"
+                                class="btn btn-outline-primary btn-sm">
+
+                                Ver perfil
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JOHAN -->
+                <div class="col-md-4">
+
+                    <div class="card member-card shadow-sm h-100">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-person-circle member-icon text-secondary"></i>
+
+                            <h3 class="h5 fw-bold mt-3">
+                                Johan Guaquez
+                            </h3>
+
+                            <p class="text-muted">
+                                Estudiante de Ingeniería de Software.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REPOSITORIO -->
+        <section class="text-center mb-5">
+
+            <div class="card shadow-sm border-0 rounded-4">
+
+                <div class="card-body p-4">
+
+                    <h2 class="h5 fw-bold mb-3">
+                        Repositorio del proyecto
+                    </h2>
+
+                    <a
+                        href="https://github.com/IvonneBarco/proyectos-5a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-dark px-4">
+
+                        <i class="bi bi-github me-2"></i>
+                        Ver proyecto en GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGRESAR -->
+        <div class="text-center">
+
+            <a
+                href="./proyectos.html"
+                class="btn btn-secondary px-4">
+
+                <i class="bi bi-arrow-left me-2"></i>
+                Regresar a proyectos
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-5">
+
+        <div class="container text-center">
+
+            <p class="mb-1 fw-semibold">
+                SiGanado
+            </p>
+
+            <small>
+                Proyecto académico - Ingeniería de Software 5A
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVwcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
