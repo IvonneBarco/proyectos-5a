@@ -1,313 +1,94 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>David Cabrera | Perfil Estudiante</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-        body {
-            min-height: 100vh;
-            background:
-                radial-gradient(circle at top left, rgba(13, 110, 253, 0.15), transparent 35%),
-                radial-gradient(circle at bottom right, rgba(111, 66, 193, 0.15), transparent 35%),
-                #f8f9fa;
-        }
-
-        .profile-container {
-            max-width: 850px;
-        }
-
-        .profile-card {
-            border: none;
-            border-radius: 24px;
-            overflow: hidden;
-        }
-
-        .profile-header {
-            height: 170px;
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border: 6px solid white;
-            margin-top: -90px;
-            background-color: white;
-        }
-
-        .social-btn {
-            min-width: 140px;
-            transition: transform 0.2s ease;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .info-card {
-            background-color: #f8f9fa;
-            border-radius: 16px;
-        }
-
-        .skill-badge {
-            font-size: 0.9rem;
-            padding: 8px 14px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-
-        <div class="container">
-
-            <a class="navbar-brand fw-bold text-primary"
-                href="../index.html">
-                5A
-            </a>
-
-            <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Abrir navegación">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse"
-                id="navbarNav">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="../proyectos.html">
-                            Proyectos
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active fw-semibold"
-                            aria-current="page"
-                            href="../estudiantes.html">
-                            Estudiantes
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-
-    <!-- Perfil -->
-    <main class="container profile-container my-5">
-
-        <div class="card profile-card shadow-lg">
-
-            <!-- Encabezado -->
-            <div class="profile-header"></div>
-
-            <div class="card-body text-center px-4 px-md-5 pb-5">
-
-                <!-- Foto -->
-                <img
-                    src="https://github.com/David-Cabrera00.png"
-                    class="rounded-circle profile-image shadow"
-                    alt="Foto de perfil de David Cabrera">
-
-
-                <!-- Nombre -->
-                <h1 class="h2 fw-bold mt-3 mb-1">
-                    David Andrés Cabrera
-                </h1>
-
-                <p class="text-primary fw-semibold mb-1">
-                    Ingeniería de Software
-                </p>
-
-                <p class="text-muted">
-                    Universidad Cooperativa de Colombia
-                </p>
-
-
-                <!-- Descripción -->
-                <div class="mx-auto mt-4"
-                    style="max-width: 650px;">
-
-                    <p class="text-muted lh-lg mb-0">
-                        Soy estudiante de quinto semestre de Ingeniería de Software
-                        en la Universidad Cooperativa de Colombia.
-                        Me interesa continuar fortaleciendo mis conocimientos en
-                        desarrollo de software, nuevas tecnologías y creación de
-                        soluciones digitales, mientras avanzo en mi formación
-                        académica y profesional.
-                    </p>
-
-                </div>
-
-
-                <!-- Información académica -->
-                <div class="info-card p-4 mt-5 text-start">
-
-                    <h5 class="fw-bold mb-4">
-                        <i class="bi bi-mortarboard-fill text-primary me-2"></i>
-                        Información académica
-                    </h5>
-
-                    <div class="row g-4">
-
-                        <div class="col-md-6">
-
-                            <small class="text-muted d-block">
-                                Universidad
-                            </small>
-
-                            <span class="fw-semibold">
-                                Universidad Cooperativa de Colombia
-                            </span>
-
-                        </div>
-
-                        <div class="col-md-6">
-
-                            <small class="text-muted d-block">
-                                Programa
-                            </small>
-
-                            <span class="fw-semibold">
-                                Ingeniería de Software
-                            </span>
-
-                        </div>
-
-                        <div class="col-md-6">
-
-                            <small class="text-muted d-block">
-                                Semestre
-                            </small>
-
-                            <span class="fw-semibold">
-                                Quinto semestre
-                            </span>
-
-                        </div>
-
-                        <div class="col-md-6">
-
-                            <small class="text-muted d-block">
-                                Grupo
-                            </small>
-
-                            <span class="fw-semibold">
-                                5A
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Redes -->
-                <div class="mt-5">
-
-                    <h5 class="fw-bold mb-4">
-                        Redes sociales
-                    </h5>
-
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-
-                        <!-- GitHub -->
-                        <a href="https://github.com/David-Cabrera00"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-dark social-btn">
-
-                            <i class="bi bi-github me-2"></i>
-                            GitHub
-
-                        </a>
-
-
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/david-cabrera-209a4a407/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-primary social-btn">
-
-                            <i class="bi bi-linkedin me-2"></i>
-                            LinkedIn
-
-                        </a>
-
-
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/david.cabrera__/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-outline-danger social-btn">
-
-                            <i class="bi bi-instagram me-2"></i>
-                            Instagram
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Regresar -->
-                <div class="mt-5">
-
-                    <a href="../estudiantes.html"
-                        class="btn btn-outline-secondary px-4">
-
-                        <i class="bi bi-arrow-left me-2"></i>
-                        Regresar a estudiantes
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-
-
-    <!-- Bootstrap JS -->
+    <title>Perfil David Alejandro Cabezas - 5A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="min-vh-100 d-flex flex-column" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">5A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../estudiantes.html">Estudiantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card shadow-lg border-1 rounded-4 p-4 p-md-5 bg-white">
+
+                    <h2 class="text-center h5 text-uppercase fw-bold text-secondary mb-4">
+                        Perfil Estudiante
+                    </h2>
+
+                    <div class="text-center">
+                        <img 
+                            src="https://avatars.githubusercontent.com/u/198805277?v=4" 
+                            alt="Foto de David Cabrera" 
+                            class="rounded-circle img-thumbnail shadow-sm mb-3" 
+                            style="width: 150px; height: 150px; object-fit: cover;"
+                        >
+
+                        <h3 class="h4 fw-bold text-dark mb-1">David Andres Cabrera</h3>
+                        <span class="badge rounded-pill px-3 py-1 mb-3 text-white" style="background: linear-gradient(135deg, #c95e5e 0%, #88addc 100%); font-weight: 500;">
+                            Ingeniería de Software
+                        </span>
+
+                        <p class="text-muted px-2 mb-4">
+                            <p>Soy estudiante de Ingeniería de Software, interesado en el desarrollo de soluciones tecnológicas y en aprender constantemente sobre nuevas herramientas y metodologías.</p>
+                            <p>Me llaman especialmente la atención áreas como la ciberseguridad, las bases de datos y el desarrollo de software. Actualmente busco fortalecer mis conocimientos, mejorar mis habilidades técnicas y participar en proyectos que me permitan adquirir experiencia y seguir creciendo como futuro profesional.</p>
+                        </p>
+                    </div>
+
+
+
+                    <div class="mt-2 pt-3 border-top">
+                        <h4 class="h6 fw-bold text-uppercase text-secondary mb-3">Redes Sociales</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="https://github.com/David-Cabrera00" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            <a href="https://www.instagram.com/david.cabrera__/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                            <a href="mailto:david.cabrerabelal@gmail.com" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-envelope-fill"></i> Contacto
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-4 pt-3 border-top">
+                        <a href="../estudiantes.html" class="btn btn-secondary px-4">Regresar</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
 
 </body>
 
