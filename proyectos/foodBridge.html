@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FoodBridge API | Proyectos 5A</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        :root {
+            --foodbridge-green: #198754;
+            --foodbridge-dark-green: #146c43;
+            --foodbridge-light: #edf7f1;
+            --foodbridge-orange: #e97817;
+            --foodbridge-dark: #212529;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f5f6f7;
+            color: var(--foodbridge-dark);
+        }
+
+        /* Navbar */
+
+        .foodbridge-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--foodbridge-green);
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--foodbridge-green);
+        }
+
+        /* Contenedor */
+
+        .project-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+        }
+
+        /* Hero */
+
+        .foodbridge-hero {
+            background-color: var(--foodbridge-green);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .foodbridge-logo {
+            width: 85px;
+            height: 85px;
+
+            margin: 0 auto 1.25rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .foodbridge-logo i {
+            font-size: 2.5rem;
+        }
+
+        .project-title {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+        }
+
+        .api-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            background-color: rgba(255, 255, 255, 0.15);
+
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: 1.5rem auto 0;
+
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Información */
+
+        .info-section {
+            padding: 2.5rem;
+        }
+
+        .section-label {
+            color: var(--foodbridge-green);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Funcionalidades */
+
+        .feature-card {
+            height: 100%;
+            padding: 1.5rem;
+
+            border-radius: 10px;
+
+            background-color: white;
+            border: 1px solid #dee2e6;
+        }
+
+        .feature-card:hover {
+            border-color: var(--foodbridge-green);
+        }
+
+        .feature-icon {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background-color: var(--foodbridge-light);
+            color: var(--foodbridge-green);
+
+            font-size: 1.2rem;
+
+            margin-bottom: 1rem;
+        }
+
+        /* Integrantes */
+
+        .member-card {
+            height: 100%;
+
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+
+            box-shadow: none;
+        }
+
+        .member-avatar {
+            width: 90px;
+            height: 90px;
+
+            margin: 1.5rem auto 1rem;
+
+            display: block;
+
+            border-radius: 50%;
+
+            border: 4px solid var(--foodbridge-light);
+
+            object-fit: cover;
+            object-position: center;
+
+            background-color: var(--foodbridge-green);
+        }
+
+        .member-role {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .profile-button {
+            background-color: var(--foodbridge-green);
+            color: white;
+
+            border: none;
+            border-radius: 6px;
+
+            font-weight: 500;
+        }
+
+        .profile-button:hover {
+            background-color: var(--foodbridge-dark-green);
+            color: white;
+        }
+
+        /* Repositorio */
+
+        .repository-box {
+            background-color: #f8f9fa;
+
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+
+            padding: 2rem;
+        }
+
+        .github-button {
+            width: 55px;
+            height: 55px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #212529;
+            color: white;
+
+            font-size: 1.5rem;
+        }
+
+        .github-button:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* Botón regresar */
+
+        .back-button {
+            background-color: var(--foodbridge-orange);
+
+            border: none;
+            border-radius: 6px;
+
+            color: white;
+
+            font-weight: 500;
+
+            padding: 0.7rem 1.5rem;
+        }
+
+        .back-button:hover {
+            color: white;
+            background-color: #cf6511;
+        }
+
+        @media (max-width: 767px) {
+            .foodbridge-hero {
+                padding: 2.5rem 1.25rem;
+            }
+
+            .info-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg foodbridge-navbar sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                5A
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Abrir menú"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto gap-lg-3">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="../proyectos.html"
+                        >
+                            <i class="bi bi-grid me-1"></i>
+                            Proyectos
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="../estudiantes.html"
+                        >
+                            <i class="bi bi-people me-1"></i>
+                            Estudiantes
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Contenido -->
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-xl-11">
+
+                <div class="project-container bg-white">
+
+                    <!-- HERO -->
+                    <section class="foodbridge-hero text-center">
+
+                        <div class="foodbridge-logo">
+
+                            <i class="bi bi-basket2-fill"></i>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <span class="api-badge">
+
+                                <i class="bi bi-code-slash"></i>
+
+                                FoodBridge API
+
+                            </span>
+
+                        </div>
+
+
+                        <h1 class="project-title mb-2">
+
+                            FoodBridge API
+
+                        </h1>
+
+
+                        <h2 class="fs-5 fw-semibold mb-0">
+
+                            Conectando excedentes de alimentos con quienes los necesitan
+
+                        </h2>
+
+
+                        <p class="hero-description">
+
+                            FoodBridge API conecta restaurantes, panaderías,
+                            supermercados y otros establecimientos con personas,
+                            fundaciones y bancos de alimentos para reducir el
+                            desperdicio de comida.
+
+                            La plataforma permite publicar alimentos disponibles
+                            para donación o venta a bajo costo, registrando
+                            información como ubicación, cantidad, estado y tiempo
+                            de disponibilidad, facilitando que los productos sean
+                            aprovechados antes de que se pierdan.
+
+                        </p>
+
+                    </section>
+
+
+                    <!-- FUNCIONALIDADES -->
+                    <section class="info-section">
+
+                        <div class="text-center mb-4">
+
+                            <span class="section-label">
+
+                                Nuestra propuesta
+
+                            </span>
+
+                            <h3 class="fw-bold mt-2">
+
+                                Tecnología con impacto social
+
+                            </h3>
+
+                            <p class="text-muted mx-auto">
+
+                                FoodBridge busca crear un puente digital entre los
+                                establecimientos que tienen alimentos disponibles
+                                y quienes pueden aprovecharlos.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="row g-3 mb-5">
+
+
+                            <!-- Publicaciones -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+
+                                        <i class="bi bi-box-seam"></i>
+
+                                    </div>
+
+                                    <h5 class="fw-bold">
+
+                                        Publicaciones
+
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+
+                                        Los establecimientos pueden registrar alimentos
+                                        disponibles indicando cantidad y estado.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Ubicación -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+
+                                        <i class="bi bi-geo-alt-fill"></i>
+
+                                    </div>
+
+                                    <h5 class="fw-bold">
+
+                                        Ubicación
+
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+
+                                        Permite conocer dónde se encuentran los alimentos
+                                        disponibles para facilitar su entrega o recogida.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Disponibilidad -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+
+                                        <i class="bi bi-clock-history"></i>
+
+                                    </div>
+
+                                    <h5 class="fw-bold">
+
+                                        Disponibilidad
+
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+
+                                        Cada publicación indica cuánto tiempo permanecerá
+                                        disponible el alimento antes de ser retirado.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Donación -->
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <div class="feature-card">
+
+                                    <div class="feature-icon">
+
+                                        <i class="bi bi-heart-fill"></i>
+
+                                    </div>
+
+                                    <h5 class="fw-bold">
+
+                                        Donar o vender
+
+                                    </h5>
+
+                                    <p class="text-muted small mb-0">
+
+                                        Los productos pueden ofrecerse como donación
+                                        o mediante venta a bajo costo.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INTEGRANTES -->
+
+                        <div class="border-top pt-5">
+
+                            <div class="text-center mb-4">
+
+                                <span class="section-label">
+
+                                    Equipo
+
+                                </span>
+
+                                <h3 class="fw-bold mt-2">
+
+                                    Integrantes del proyecto
+
+                                </h3>
+
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+
+                                <!-- Luis -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <img
+                                            src="https://avatars.githubusercontent.com/u/198504440?s=400&u=026b1a6b0c04f6e86008466c4cae0866ced4d644&v=4"
+                                            alt="Foto de Luis Sebastián Díaz"
+                                            class="member-avatar"
+                                        >
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+
+                                                Luis Sebastián Díaz
+
+                                            </h5>
+
+                                            <p class="member-role">
+
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+
+                                            </p>
+
+                                            <a
+                                                href="../estudiantes/perfil-luis-diaz.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+
+                                                Ver perfil
+
+                                                <i class="bi bi-arrow-right ms-1"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- David -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <img
+                                            src="https://avatars.githubusercontent.com/u/198805277?v=4"
+                                            alt="Foto de David Andrés Cabrera"
+                                            class="member-avatar"
+                                        >
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+
+                                                David Andrés Cabrera
+
+                                            </h5>
+
+                                            <p class="member-role">
+
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+
+                                            </p>
+
+
+                                            <div class="d-flex justify-content-center gap-2 mb-3">
+
+                                                <a
+                                                    href="https://github.com/David-Cabrera00"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-dark btn-sm rounded-circle"
+                                                >
+                                                    <i class="bi bi-github"></i>
+                                                </a>
+
+                                                <a
+                                                    href="https://www.linkedin.com/in/david-cabrera-209a4a407/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-primary btn-sm rounded-circle"
+                                                >
+                                                    <i class="bi bi-linkedin"></i>
+                                                </a>
+
+                                                <a
+                                                    href="https://www.instagram.com/david.cabrera__/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                                >
+                                                    <i class="bi bi-instagram"></i>
+                                                </a>
+
+                                            </div>
+
+
+                                            <a
+                                                href="../estudiantes/perfil-david-cabrera.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+
+                                                Ver perfil
+
+                                                <i class="bi bi-arrow-right ms-1"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Jorge -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <img
+                                            src="https://th.bing.com/th/id/OIP.bMAcqBcE-8DDl4WLD18hqwHaEK?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                            alt="Foto de Jorge Alejandro Parra"
+                                            class="member-avatar"
+                                        >
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+
+                                                Jorge Alejandro Parra
+
+                                            </h5>
+
+                                            <p class="member-role">
+
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+
+                                            </p>
+
+
+                                            <div class="d-flex justify-content-center gap-2 mb-3">
+
+                                                <a
+                                                    href="https://github.com/AlePython-byte"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-dark btn-sm rounded-circle"
+                                                >
+
+                                                    <i class="bi bi-github"></i>
+
+                                                </a>
+
+                                                <a
+                                                    href="https://www.linkedin.com/in/alejandro-parra-91ab55319/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-primary btn-sm rounded-circle"
+                                                >
+
+                                                    <i class="bi bi-linkedin"></i>
+
+                                                </a>
+
+                                            </div>
+
+
+                                            <a
+                                                href="../estudiantes/perfil-alejandro.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+
+                                                Ver perfil
+
+                                                <i class="bi bi-arrow-right ms-1"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Danilo -->
+                                <div class="col">
+
+                                    <div class="card member-card">
+
+                                        <img
+                                            src="../assets/danilo-lara.jpg"
+                                            alt="Foto de Danilo Lara"
+                                            class="member-avatar"
+                                        >
+
+                                        <div class="card-body d-flex flex-column text-center">
+
+                                            <h5 class="card-title fw-bold">
+
+                                                Danilo Lara
+
+                                            </h5>
+
+                                            <p class="member-role">
+
+                                                Estudiante de 5.º semestre de
+                                                Ingeniería de Software.
+
+                                            </p>
+
+                                            <a
+                                                href="../estudiantes/perfil-danilo-lara.html"
+                                                class="btn profile-button w-100 mt-auto"
+                                            >
+
+                                                Ver perfil
+
+                                                <i class="bi bi-arrow-right ms-1"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REPOSITORIO -->
+
+                        <div class="repository-box text-center mt-5">
+
+                            <span class="section-label">
+
+                                Código fuente
+
+                            </span>
+
+                            <h4 class="fw-bold mt-2 mb-2">
+
+                                Repositorio de FoodBridge API
+
+                            </h4>
+
+                            <p class="text-muted mb-4">
+
+                                Consulta el código fuente y el desarrollo del proyecto
+                                desde nuestro repositorio de GitHub.
+
+                            </p>
+
+
+                            <a
+                                href="https://github.com/David-Cabrera00/FoodBridge-API.git"
+                                class="github-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="bi bi-github"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- REGRESAR -->
+
+                        <div class="text-center mt-5 pt-4 border-top">
+
+                            <a
+                                href="../proyectos.html"
+                                class="btn back-button"
+                            >
+
+                                <i class="bi bi-arrow-left me-2"></i>
+
+                                Regresar a proyectos
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
