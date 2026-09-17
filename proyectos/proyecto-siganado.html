@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SiGanado | Proyectos 5A</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #198754, #0d6efd);
+            color: white;
+            padding: 35px 20px;
+        }
+
+        .info-badge {
+            background: #f1f3f5;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">5A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="../proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../estudiantes.html">Estudiantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <div class="card project-card shadow-lg">
+
+                    <!-- Imagen del Proyecto -->
+                    <div class="text-center bg-white pt-4 px-4">
+                        <img src="imagenes/siganado.png" 
+                             alt="Banner SiGanado" 
+                             class="img-fluid rounded-4 w-100 shadow-sm" 
+                             style="max-height: 350px; object-fit: cover;">
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <h3 class="h5 fw-bold mb-3">
+                            Sistema de Gestión y Control de Animales
+                        </h3>
+
+                        <p class="text-muted">
+                            SIGanado es una plataforma integral para fincas que centraliza el control pecuario de los
+                            animales (registro, salud, genealogía y reproducción), la gestión de inventarios de
+                            alimento e insumos, y la administración de finanzas, permitiendo a los productores
+                            optimizar la productividad, asegurar la trazabilidad y tomar decisiones más inteligentes
+                            para el negocio ganadero.
+                        </p>
+
+                        <div class="row g-3 mt-3 mb-4">
+                            <div class="col-6 col-md-3">
+                                <div class="info-badge">
+                                    <i class="bi bi-clipboard-data-fill text-success fs-4"></i>
+                                    <div class="small fw-semibold mt-1">Registro</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="info-badge">
+                                    <i class="bi bi-heart-pulse-fill text-danger fs-4"></i>
+                                    <div class="small fw-semibold mt-1">Salud</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="info-badge">
+                                    <i class="bi bi-shield-check text-primary fs-4"></i>
+                                    <div class="small fw-semibold mt-1">Vacunación</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="info-badge">
+                                    <i class="bi bi-graph-up-arrow text-warning fs-4"></i>
+                                    <div class="small fw-semibold mt-1">Seguimiento</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección de Integrantes Detallada -->
+                        <div class="border-top pt-4 mb-4">
+                            <h3 class="h6 text-uppercase fw-bold text-secondary mb-3 text-center">Integrantes</h3>
+                            
+                            <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+                                
+                                <!-- Kevin Martinez -->
+                                <div class="col">
+                                    <div class="card h-100 border shadow-sm text-center p-3 d-flex flex-column">
+                                        <img src="https://github.com/Martinez572.png" class="rounded-circle mx-auto mb-2" alt="Kevin Martinez" style="width: 75px; height: 75px; object-fit: cover;">
+                                        <h5 class="h6 fw-bold mb-1">Kevin Martinez</h5>
+                                        <p class="small text-muted mb-2">Ingeniería de Software</p>
+                                        <div class="d-flex justify-content-center gap-1 mb-2">
+                                            <!-- GitHub-->
+                                            <a href="https://github.com/Martinez572" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;"><i class="bi bi-github" style="font-size: 0.8rem;"></i></a>
+                                            
+                                            <!-- IG -->
+                                            <a href="https://instagram.com/kevinmartinez482" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;"><i class="bi bi-instagram" style="font-size: 0.8rem;"></i></a>                                        </div>
+                                        <!-- Enlace perfil-->
+                                        <a href="../estudiantes/perfil-kevin-martinez.html" class="btn btn-outline-primary btn-sm mt-auto" style="font-size: 0.75rem;">Ver perfil</a>
+    
+                                    </div>
+                                </div>
+
+                                <!-- Gabriela Benitez -->
+                                <div class="col">
+                                    <div class="card h-100 border shadow-sm text-center p-3 d-flex flex-column">
+                                        <img src="../estudiantes/gabriela-benitez.jpeg" class="rounded-circle mx-auto mb-2" alt="Gabriela Benitez" style="width: 75px; height: 75px; object-fit: cover;">
+                                        <h5 class="h6 fw-bold mb-1">Gabriela Benitez</h5>
+                                        <p class="small text-muted mb-2">Ingeniería de Software</p>
+                                        <div class="d-flex justify-content-center gap-1 mb-2">
+                                            <!-- GitHub-->
+                                            <a href="https://github.com/Gabriela50" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;"><i class="bi bi-github" style="font-size: 0.8rem;"></i></a>
+                                        
+                                        </div>
+                                        <!-- Enlace perfil-->
+                                        <a href="../perfil-gabriela.html" class="btn btn-outline-primary btn-sm mt-auto" style="font-size: 0.75rem;">Ver perfil</a>
+                                    </div>
+                                </div>
+
+                                <!-- Johan Guaquez -->
+                                <div class="col">
+                                    <div class="card h-100 border shadow-sm text-center p-3 d-flex flex-column">
+                                        <img src="../estudiantes/johan.jpeg" class="rounded-circle mx-auto mb-2" alt="Johan Guaquez" style="width: 75px; height: 75px; object-fit: cover;">
+                                        <h5 class="h6 fw-bold mb-1">Johan Guaquez</h5>
+                                        <p class="small text-muted mb-2">Ingeniería de Software</p>
+                                        <div class="d-flex justify-content-center gap-1 mb-2">
+                                            <!-- GitHub-->
+                                            <a href="https://github.com/JohanGuaquez" target="_blank" class="btn btn-outline-dark btn-sm rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;"><i class="bi bi-github" style="font-size: 0.8rem;"></i></a>
+                                            <!-- LinkedIn-->
+                                            <a href="https://www.linkedin.com/in/johan-alexis-guaquez-5b7b75387/" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;"><i class="bi bi-linkedin" style="font-size: 0.8rem;"></i></a>
+                                        </div>
+                                        <!-- Enlace perfil-->
+                                        <a href="../estudiantes/perfil-johan-guaquez.html" class="btn btn-outline-primary btn-sm mt-auto" style="font-size: 0.75rem;">Ver perfil</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Enlace a Repositorio -->
+                        <div class="mb-4">
+                            <h3 class="h6 fw-bold text-uppercase text-secondary mb-2">Enlace a Repositorio</h3>
+                            <a href="https://github.com/tu-usuario/siganado" target="_blank" rel="noopener noreferrer" class="btn btn-dark d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-github"></i> GIT
+                            </a>
+                        </div>
+
+                        <div class="d-flex justify-content-end pt-3 border-top">
+                            <a href="../proyectos.html" class="btn btn-secondary px-4 py-2 fw-semibold">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Regresar
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
