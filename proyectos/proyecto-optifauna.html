@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OptiFauna | Proyecto 5A</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: #f4f6f8;
+            color: #212529;
+        }
+
+        .navbar {
+            background: #ffffff !important;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .navbar-brand:hover {
+            color: #0d6efd;
+        }
+
+        .nav-link {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #0d6efd;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 40px;
+        }
+
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: #6c757d;
+            line-height: 1.7;
+            font-size: 1rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .member-card {
+            height: 100%;
+            border: 1px solid #e9ecef;
+            border-radius: 14px;
+            padding: 25px 20px;
+            background: #ffffff;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .member-photo {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #f1f3f5;
+        }
+
+        .member-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .member-career {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        .profile-button {
+            width: 100%;
+        }
+
+        .repository {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .repository-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .repository a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bottom-actions {
+            border-top: 1px solid #e9ecef;
+            padding-top: 25px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                padding: 25px;
+            }
+
+            .project-image {
+                height: 220px;
+            }
+
+            .project-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-vh-100 d-flex flex-column">
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">5A</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../proyectos.html">
+                            Proyectos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../estudiantes.html">
+                            Estudiantes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <div class="project-card">
+
+            <img src="imagenes/OptifaunaLogo.jpeg" alt="Logo de OptiFauna" class="project-image">
+
+            <div class="project-content">
+
+                <div class="text-center mb-5">
+
+                    <h1 class="project-title">
+                        OptiFauna
+                    </h1>
+
+                    <p class="project-description">
+                        OptiFauna es un backend desarrollado como una API REST especializada en el
+                        procesamiento y gestión de telemetría IoT aplicada al sector ganadero.
+                        El sistema permitirá administrar el inventario de animales, realizar el
+                        monitoreo de diferentes aspectos relacionados con su salud y procesar los
+                        datos obtenidos mediante dispositivos IoT para identificar situaciones que
+                        requieran atención.
+                        Además, contará con un sistema de generación de alertas automatizadas para
+                        facilitar la detección oportuna de eventos relevantes.
+                        El proyecto estará enfocado principalmente en la lógica de negocio,
+                        el procesamiento de datos y la escalabilidad del backend, sin requerir
+                        el desarrollo de una interfaz frontend.
+                    </p>
+
+                </div>
+
+                <section class="mb-5">
+
+                    <h2 class="section-title">
+                        Integrantes
+                    </h2>
+
+                    <div class="row g-4">
+
+                        <div class="col-12 col-md-4">
+
+                            <div class="member-card d-flex flex-column">
+
+                                <img src="https://via.placeholder.com/90" alt="Cristian Javier Velasco"
+                                    class="member-photo mx-auto">
+
+                                <h3 class="member-name">
+                                    Cristian Javier Velasco
+                                </h3>
+
+                                <p class="member-career">
+                                    Ingeniería de Software
+                                </p>
+
+                                <a href="estudiantes/cristiann.html"
+                                    class="btn btn-outline-primary btn-sm profile-button mt-auto">
+                                    Ver perfil
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-4">
+
+                            <div class="member-card d-flex flex-column">
+
+                                <img src="https://via.placeholder.com/90" alt="Carlos Julián Benavides"
+                                    class="member-photo mx-auto">
+
+                                <h3 class="member-name">
+                                    Carlos Julián Benavides
+                                </h3>
+
+                                <p class="member-career">
+                                    Ingeniería de Software
+                                </p>
+
+                                <a href="estudiantes/perfil-carlos-julian.html"
+                                    class="btn btn-outline-primary btn-sm profile-button mt-auto">
+                                    Ver perfil
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-4">
+
+                            <div class="member-card d-flex flex-column">
+
+                                <img src="https://via.placeholder.com/90" alt="Gabriel Esteban Paz"
+                                    class="member-photo mx-auto">
+
+                                <h3 class="member-name">
+                                    Gabriel Esteban Paz
+                                </h3>
+
+                                <p class="member-career">
+                                    Ingeniería de Software
+                                </p>
+
+                                <a href="estudiantes/perfil-gabrielPaz.html"
+                                    class="btn btn-outline-primary btn-sm profile-button mt-auto">
+                                    Ver perfil
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="repository">
+
+                    <h2 class="repository-title">
+                        Repositorio del proyecto
+                    </h2>
+
+                    <a href="https://github.com/IvonneBarco/proyectos-5a.git" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-dark btn-sm">
+                        <i class="bi bi-github"></i>
+                        Ver repositorio en GitHub
+                    </a>
+
+                </section>
+
+                <div class="bottom-actions d-flex justify-content-between align-items-center">
+
+                    <span class="text-muted small">
+                        Proyecto académico · 5A
+                    </span>
+
+                    <a href="../proyectos.html" class="btn btn-secondary btn-sm px-4">
+                        Regresar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
