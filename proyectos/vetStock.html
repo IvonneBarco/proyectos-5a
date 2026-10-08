@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetStock API | Proyectos 5A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        .texto-justificado {
+            text-align: justify;
+        }
+        .btn-theme {
+            background: linear-gradient(135deg, #6d28d9 0%, #0d9488 100%);
+            border: none;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+        }
+        .btn-theme:hover {
+            background: linear-gradient(135deg, #5b21b6 0%, #0f766e 100%);
+            color: #ffffff;
+        }
+        .text-theme {
+            background: linear-gradient(135deg, #6d28d9 0%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon-theme {
+            color: #0d9488;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="../index.html">5A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="../proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../estudiantes.html">Estudiantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-9">
+
+                <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-white mx-auto" style="max-width: 100%;">
+
+                    <!-- ENCABEZADO -->
+                    <h2 class="text-center mb-4">
+                        <span class="d-block display-6 fw-bolder text-theme">
+                            VetStock API
+                        </span>
+                        <span class="d-block mt-2 fs-5 fw-semibold text-dark">
+                            Inventario y Farmacia para Clínicas Veterinarias
+                        </span>
+                    </h2>
+
+                    <!-- PORTADA E INFORMACIÓN -->
+                    <div class="text-center">
+                        <img
+                            src="imagenes/vetstock.svg"
+                            alt="Portada VetStock API"
+                            class="img-fluid shadow-sm mb-4 mx-auto d-block rounded-3"
+                            style="width: 100%; max-height: 420px; object-fit: cover;"
+                        >
+
+                        <h6 class="fw-bold text-secondary mb-3">Backend Architecture | RESTful API & Salud Animal</h6>
+                        <p class="text-muted px-2 mb-4 texto-justificado fs-6 lh-lg">
+                            VetStock es un sistema backend para controlar el inventario de medicamentos, vacunas e insumos de una clínica veterinaria. Registra cada producto por lote y fecha de vencimiento, descuenta el stock automáticamente cuando se dispensa un medicamento con fórmula del veterinario y genera alertas cuando un producto está por vencerse o baja de su stock mínimo, evitando pérdidas y garantizando que la clínica siempre tenga lo necesario para atender a sus pacientes.
+                        </p>
+                    </div>
+
+                    <!-- FUNCIONALIDADES -->
+                    <div class="mt-3 pt-4 border-top">
+                        <h4 class="text-center h6 fw-bold text-uppercase mb-4 text-secondary">Funcionalidades</h4>
+                        <div class="row g-3 text-start">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-capsule fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Catálogo de medicamentos</h5>
+                                        <p class="text-muted small mb-0">Registro de medicamentos, vacunas e insumos con presentación, especie y precio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-calendar-x fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Lotes y vencimientos</h5>
+                                        <p class="text-muted small mb-0">Control por lote con salida del producto más próximo a vencer primero.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-bell fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Alertas de stock</h5>
+                                        <p class="text-muted small mb-0">Avisos cuando un producto baja de su stock mínimo o está cerca de vencerse.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-file-earmark-medical fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Dispensación con fórmula</h5>
+                                        <p class="text-muted small mb-0">Salida de medicamentos asociada a la fórmula del veterinario y a la mascota.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-truck fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Proveedores y compras</h5>
+                                        <p class="text-muted small mb-0">Registro de proveedores y entradas de mercancía que actualizan el inventario.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex gap-3">
+                                    <i class="bi bi-bar-chart fs-4 icon-theme"></i>
+                                    <div>
+                                        <h5 class="h6 fw-bold text-dark mb-1">Reportes</h5>
+                                        <p class="text-muted small mb-0">Consumo por periodo, productos más usados y pérdidas por vencimiento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INTEGRANTES -->
+                    <div class="mt-4 pt-4 border-top">
+                        <h4 class="text-center h6 fw-bold text-uppercase mb-4 text-secondary">Integrantes</h4>
+                        <div class="row justify-content-center g-3 my-2">
+
+                            <!-- Tarjeta Andrés Camilo Bolaños -->
+                            <div class="col-12 col-md-6 col-lg-5">
+                                <div class="card h-100 shadow-sm border-0 rounded-3 p-3">
+                                    <img
+                                        src="https://avatars.githubusercontent.com/u/237321861?v=4"
+                                        alt="Foto de perfil de Andrés Camilo Bolaños"
+                                        class="rounded-circle img-thumbnail shadow-sm mb-3 mx-auto d-block"
+                                        style="width: 140px; height: 140px; object-fit: cover;"
+                                    >
+                                    <div class="card-body d-flex flex-column text-center p-0">
+                                        <h5 class="card-title fw-bold text-dark mb-1">Andrés Camilo Bolaños</h5>
+                                        <p class="card-text text-muted small mb-3">Estudiante de 4to semestre de ingeniería de software.</p>
+
+                                        <!-- Redes Sociales -->
+                                        <div class="d-flex justify-content-center gap-2 mb-3 mt-auto">
+                                            <a href="https://github.com/camilin0811" target="_blank" rel="noopener noreferrer"
+                                               class="btn btn-outline-dark btn-sm p-0 d-flex align-items-center justify-content-center"
+                                               style="width: 34px; height: 34px;" title="GitHub">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/an_druuw?stkn=MWEzejYzaWZ5bTUyMw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
+                                               class="btn btn-outline-danger btn-sm p-0 d-flex align-items-center justify-content-center"
+                                               style="width: 34px; height: 34px;" title="Instagram">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                        </div>
+
+                                        <a href="../estudiantes/camilin.html" class="btn btn-theme w-100 fw-semibold">
+                                            Ver perfil
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ENLACE AL REPOSITORIO DE GITHUB -->
+                    <div class="mt-4 pt-3 border-top text-center">
+                        <h4 class="h6 fw-bold text-uppercase mb-3 text-secondary">
+                            Enlace a repositorio de GitHub
+                        </h4>
+                        <div class="d-flex justify-content-center">
+                            <a
+                                href="#"
+                                class="btn btn-outline-dark rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                                style="width: 56px; height: 56px;"
+                                aria-label="Repositorio de VetStock API"
+                            >
+                                <i class="bi bi-github fs-3"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BOTÓN REGRESAR -->
+                    <div class="text-center d-flex justify-content-center mt-4 pt-3 border-top">
+                        <a href="../proyectos.html" class="btn btn-theme px-4 py-2 fw-semibold">
+                            <i class="bi bi-arrow-left me-1"></i> Regresar
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
