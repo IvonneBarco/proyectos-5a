@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urbania — Proyecto</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: #edf2f7;
+    }
+
+    .urbania-card {
+      width: 100%;
+      max-width: 540px;
+      border: 0;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .urbania-header {
+      background: #143c46;
+      color: white;
+      padding: 36px;
+    }
+
+    .urbania-label {
+      color: #a3e5cb;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .technology {
+      background: #e8f4ee;
+      color: #215b46;
+    }
+  </style>
+</head>
+
+<body class="d-flex align-items-center justify-content-center p-3 py-5">
+  <main class="card urbania-card shadow-lg" aria-labelledby="project-title">
+
+    <header class="urbania-header">
+      <p class="urbania-label fw-semibold mb-3">Proyecto de software</p>
+      <h1 id="project-title" class="display-4 fw-bold mb-2">Urbania</h1>
+      <p class="mb-0 text-white-50">
+        Reporta un problema. Contribuye a mejorar tu barrio.
+      </p>
+    </header>
+
+    <div class="card-body p-4">
+      <p class="card-text text-secondary">
+        API para registrar incidentes urbanos, agregar su ubicación
+        y aportar evidencias. Permite a los ciudadanos consultar sus
+        reportes y a los administradores gestionar su estado.
+      </p>
+
+      <h2 class="h6 fw-bold mt-4 mb-3">Tecnologías</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge technology rounded-pill px-3 py-2">NestJS</span>
+        <span class="badge technology rounded-pill px-3 py-2">TypeScript</span>
+        <span class="badge technology rounded-pill px-3 py-2">PostgreSQL</span>
+        <span class="badge technology rounded-pill px-3 py-2">TypeORM</span>
+      </div>
+
+      <h2 class="h6 fw-bold mt-4 mb-3">Funciones principales</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item px-0">
+           Registro e inicio de sesión con JWT.
+        </li>
+        <li class="list-group-item px-0">
+           Creación y consulta de reportes por categoría.
+        </li>
+        <li class="list-group-item px-0">
+           Ubicación con dirección y coordenadas.
+        </li>
+        <li class="list-group-item px-0">
+           Evidencias mediante enlaces a imágenes o archivos.
+        </li>
+        <li class="list-group-item px-0">
+           Gestión de estados por el administrador.
+        </li>
+      </ul>
+
+      <div class="bg-light rounded-3 p-3 mt-4">
+        <h2 class="h6 fw-bold mb-2">Ejemplo de uso</h2>
+        <p class="small text-secondary mb-0">
+          Un ciudadano reporta un bache, añade su ubicación y una
+          evidencia. El administrador revisa el reporte y actualiza
+          su estado hasta marcarlo como resuelto.
+        </p>
+      </div>
+    </div>
+
+    <footer class="card-footer bg-white text-center py-3 border-0">
+      <small class="text-secondary">
+        Ciudadanos y administradores · API REST
+      </small>
+    </footer>
+
+  </main>
+</body>
+</html>
