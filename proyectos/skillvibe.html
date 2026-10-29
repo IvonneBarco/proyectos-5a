@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkillVibe | Proyectos 5A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --skillvibe-teal: #0f766e;
+            --skillvibe-blue: #2563eb;
+            --skillvibe-ink: #17212b;
+        }
+
+        body {
+            min-height: 100vh;
+            color: var(--skillvibe-ink);
+            background: #f3f7f6;
+        }
+
+        .skillvibe-hero {
+            color: #fff;
+            background: linear-gradient(125deg, #0f766e, #2563eb);
+        }
+
+        .skillvibe-icon {
+            width: 76px;
+            height: 76px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, .4);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .12);
+            font-size: 2.4rem;
+        }
+
+        .section-kicker {
+            color: var(--skillvibe-teal);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .info-icon {
+            color: var(--skillvibe-teal);
+            font-size: 1.35rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">5A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="../proyectos.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../estudiantes.html">Estudiantes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <article class="bg-white border rounded-3 overflow-hidden shadow-sm">
+            <header class="skillvibe-hero px-4 py-5 px-md-5">
+                <div class="d-flex flex-column flex-md-row align-items-md-center gap-4">
+                    <div class="skillvibe-icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div>
+                        <p class="text-uppercase small fw-semibold mb-2">Tutorías online</p>
+                        <h1 class="display-5 fw-bold mb-2">SkillVibe</h1>
+                        <p class="lead mb-0">Un punto de encuentro digital entre estudiantes y tutores.</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-4 p-md-5">
+                <section class="mb-5">
+                    <p class="section-kicker mb-2">Resumen general</p>
+                    <p class="text-secondary lh-lg mb-0">
+                        SkillVibe es una plataforma digital de tutorías online que conecta estudiantes con tutores calificados en distintas áreas del conocimiento. Busca facilitar el acceso a clases personalizadas desde un solo lugar, con horarios flexibles y herramientas que apoyen el aprendizaje.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <p class="section-kicker mb-3">Cómo funciona</p>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="bi bi-search info-icon" aria-hidden="true"></i>
+                                <div>
+                                    <h2 class="h6 fw-bold">Encuentra un tutor</h2>
+                                    <p class="text-secondary small mb-0">El estudiante crea una cuenta y busca por materia, especialidad, tarifa, disponibilidad y calificaciones.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex gap-3">
+                                <i class="bi bi-camera-video info-icon" aria-hidden="true"></i>
+                                <div>
+                                    <h2 class="h6 fw-bold">Coordina y aprende</h2>
+                                    <p class="text-secondary small mb-0">Selecciona una opción, coordina la tutoría y realiza la clase virtual; al finalizar, puede valorar la experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary small mt-3 mb-0">
+                        La propuesta contempla videollamadas, chat, pizarra compartida y pagos digitales, según las funcionalidades que se integren.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <p class="section-kicker mb-3">Comunidad</p>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <h2 class="h6 fw-bold"><i class="bi bi-person-workspace me-2 info-icon" aria-hidden="true"></i>Estudiantes</h2>
+                            <p class="text-secondary small mb-0">Dirigido a estudiantes de bachillerato, universitarios y personas que quieran reforzar conocimientos o aprender nuevas habilidades.</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h2 class="h6 fw-bold"><i class="bi bi-person-video3 me-2 info-icon" aria-hidden="true"></i>Tutores</h2>
+                            <p class="text-secondary small mb-0">Docentes y especialistas pueden compartir sus conocimientos y conectar con estudiantes interesados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <p class="section-kicker mb-3">Modelo de ingresos</p>
+                    <p class="text-secondary lh-lg mb-0">
+                        El modelo plantea una comisión inicial estimada entre el 15 % y el 20 % por cada tutoría realizada. También contempla paquetes de clases, membresías para tutores y posibles alianzas con instituciones.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <p class="section-kicker mb-3">Tecnología del proyecto</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge text-bg-light border">Java</span>
+                        <span class="badge text-bg-light border">Spring Boot</span>
+                        <span class="badge text-bg-light border">Maven</span>
+                        <span class="badge text-bg-light border">JWT</span>
+                    </div>
+                    <p class="text-secondary small mb-0">
+                        El backend se reporta con componentes de autenticación, seguridad mediante JWT y gestión de tutorías, organizados en controladores, servicios, modelos y repositorios. La implementación actual de cada funcionalidad debe verificarse en el código fuente.
+                    </p>
+                </section>
+
+                <section class="border-top pt-4 mb-4">
+                    <p class="section-kicker mb-2">Objetivo principal</p>
+                    <p class="text-secondary lh-lg mb-0">
+                        Crear un espacio educativo digital confiable, práctico y accesible que simplifique la conexión entre quienes necesitan aprender y quienes pueden enseñar, reuniendo distintas materias y tutorías personalizadas en una misma plataforma.
+                    </p>
+                </section>
+
+                <div class="border-top pt-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <p class="small text-secondary mb-0">SkillVibe reúne aprendizaje personalizado y una comunidad de enseñanza.</p>
+                    <a href="../proyectos.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Volver a proyectos
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
