@@ -1,0 +1,971 @@
+/* =========================================
+   GENERAL — SPACEHEY / MYSPACE DARK
+========================================= */
+
+#profile-intro {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000;
+
+    animation: closeIntro 0.7s ease 3.5s forwards;
+}
+
+#profile-intro img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+@keyframes closeIntro {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            rgba(10, 18, 12, 0.25),
+            rgba(10, 18, 12, 0.25)
+        ),
+        url("https://files.catbox.moe/2jax2j.jpeg") center top / cover fixed no-repeat;
+
+    color: #eeeeee;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #00f5f5;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+.page {
+    width: 1250px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+}
+
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.header {
+    height: 55px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #858585 0%,
+            #4b4b4b 45%,
+            #252525 100%
+        );
+
+    border-bottom: 1px solid #111111;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+
+.logo {
+    color: #ffffff;
+
+    font-size: 29px;
+
+    font-weight: bold;
+
+    letter-spacing: -1px;
+
+    text-shadow: 0 1px 2px #000000;
+}
+
+
+
+/* =========================================
+   BÚSQUEDA
+========================================= */
+
+.search-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.search-area label {
+    color: #eeeeee;
+}
+
+.search-area input {
+    width: 195px;
+
+    height: 23px;
+
+    padding: 2px 5px;
+
+    color: #111111;
+
+    background: #ffffff;
+
+    border: 1px solid #777777;
+
+    border-radius: 2px;
+}
+
+.search-area button {
+    height: 23px;
+
+    padding: 1px 8px;
+
+    color: #222222;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #cfcfcf
+    );
+
+    border: 1px solid #777777;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.search-area button:hover {
+    background: #ffffff;
+}
+
+
+
+/* =========================================
+   CUENTA
+========================================= */
+
+.account-links {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+.account-links a {
+    color: #ffffff;
+
+    font-weight: normal;
+}
+
+.account-links a:hover {
+    color: #00ffff;
+}
+
+
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.navigation {
+    min-height: 28px;
+
+    padding: 5px 18px;
+
+    color: #eeeeee;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #444444 0%,
+            #292929 50%,
+            #1a1a1a 100%
+        );
+
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #111111;
+
+    text-align: center;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.navigation a {
+    color: #eeeeee;
+
+    font-weight: normal;
+}
+
+.navigation a:hover {
+    color: #00ffff;
+}
+
+.navigation span {
+    margin: 0 7px;
+
+    color: #888888;
+}
+
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.content {
+    padding: 20px 13px 40px;
+}
+
+.username {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+
+
+/* =========================================
+   LAYOUT PRINCIPAL
+========================================= */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: 390px 1fr;
+
+    gap: 24px;
+}
+
+
+
+/* =========================================
+   PERFIL SUPERIOR IZQUIERDO
+========================================= */
+
+.profile-summary {
+    display: grid;
+
+    grid-template-columns: 195px 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 29, 21, 0.93),
+            rgba(93, 106, 93, 0.85),
+            rgba(10, 10, 10, 0.96)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 0 18px 18px 0;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+.profile-image {
+    width: 195px;
+
+    height: 185px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+
+.basic-info {
+    padding: 12px 10px 10px 0;
+
+    color: #eeeeee;
+}
+
+
+.basic-info p {
+    margin: 0 0 15px;
+}
+
+
+.online {
+    color: #00ff73;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 5px rgba(0, 255, 115, 0.4);
+}
+
+
+
+/* =========================================
+   TEXTO SECUNDARIO
+========================================= */
+
+.small-label {
+    margin: 10px 0;
+
+    color: #eeeeee;
+
+    font-weight: bold;
+
+    text-shadow: 0 1px 2px #000000;
+}
+
+
+
+/* =========================================
+   CAJAS OSCURAS
+========================================= */
+
+.blue-box {
+    margin-bottom: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.85);
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22, 29, 21, 0.92),
+            rgba(91, 101, 89, 0.83),
+            rgba(15, 15, 15, 0.95)
+        );
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+.blue-title {
+    padding: 6px 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #747474 0%,
+            #3f3f3f 45%,
+            #121212 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    text-shadow:
+        1px 1px 2px #000000;
+
+    border-bottom: 1px solid #000000;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+.blue-content {
+    padding: 13px 15px;
+
+    color: #eeeeee;
+}
+
+
+
+/* =========================================
+   CONTACTOS / REDES SOCIALES
+========================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px 18px;
+}
+
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.contact-item a {
+    color: #00ffff;
+}
+
+
+.contact-icon {
+    width: 18px;
+
+    height: 18px;
+
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+   URL DEL PERFIL
+========================================= */
+
+.profile-url {
+    margin-bottom: 12px;
+
+    padding: 8px 9px;
+
+    color: #eeeeee;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(85, 92, 83, 0.92),
+            rgba(20, 24, 20, 0.96)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+.profile-url strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #ffffff;
+}
+
+
+
+/* =========================================
+   TABLA DE INTERESES
+========================================= */
+
+.interests {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    color: #eeeeee;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 27, 18, 0.95),
+            rgba(76, 83, 72, 0.87),
+            rgba(10, 10, 10, 0.96)
+        );
+
+    border: 1px solid #111111;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+.interests th,
+.interests td {
+    padding: 10px 9px;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.interests tr:last-child th,
+.interests tr:last-child td {
+    border-bottom: none;
+}
+
+
+.interests th {
+    width: 120px;
+
+    text-align: left;
+
+    color: #00ffff;
+
+    background: rgba(0, 0, 0, 0.42);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.interests td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+
+/* =========================================
+   COLUMNA DERECHA
+========================================= */
+
+.right-column {
+    padding-top: 0;
+}
+
+
+
+/* =========================================
+   ACTIVIDAD RECIENTE
+========================================= */
+
+.latest {
+    margin-bottom: 25px;
+
+    color: #eeeeee;
+
+    text-shadow: 0 1px 2px #000000;
+}
+
+
+.latest h3 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.latest h3 a {
+    color: #00ffff;
+}
+
+
+.latest p {
+    color: #dddddd;
+
+    font-style: italic;
+}
+
+
+
+/* =========================================
+   SECCIONES PRINCIPALES OSCURAS
+========================================= */
+
+.orange-section {
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 25, 20, 0.94),
+            rgba(91, 98, 88, 0.84),
+            rgba(12, 12, 12, 0.96)
+        );
+
+    border: 1px solid #111111;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 3px 9px rgba(0, 0, 0, 0.58),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+.orange-title {
+    padding: 7px 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #777777 0%,
+            #3d3d3d 45%,
+            #111111 100%
+        );
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    text-shadow:
+        1px 1px 2px #000000;
+
+    border-bottom: 1px solid #000000;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+.orange-content {
+    padding: 12px 10px 10px;
+}
+
+
+.orange-content h3 {
+    margin: 0 0 5px;
+
+    color: #00ffff;
+
+    font-size: 17px;
+}
+
+
+.orange-content p {
+    margin: 2px 0 20px;
+
+    color: #eeeeee;
+}
+
+
+
+/* =========================================
+   CABECERA DE PROYECTOS
+========================================= */
+
+.projects-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 7px 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #777777 0%,
+            #3e3e3e 45%,
+            #111111 100%
+        );
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    text-shadow:
+        1px 1px 2px #000000;
+
+    border-bottom: 1px solid #000000;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+.projects-header a {
+    color: #00ffff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================================
+   CONTADOR DE PROYECTOS
+========================================= */
+
+.project-count {
+    padding: 12px 10px 3px;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+
+.project-count span {
+    color: #00ff5a;
+}
+
+
+
+/* =========================================
+   GRID DE PROYECTOS
+========================================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px 18px;
+
+    padding: 14px 10px;
+}
+
+
+.project {
+    text-align: center;
+}
+
+
+.project-name {
+    min-height: 32px;
+
+    margin-bottom: 7px;
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    text-shadow: 0 1px 2px #000000;
+}
+
+
+.project img {
+    width: 100%;
+
+    height: 115px;
+
+    object-fit: cover;
+
+    border: 1px solid #111111;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* =========================================
+   SCROLLBAR — DETALLE ESTILO ANTIGUO
+========================================= */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d0d0d0;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            to right,
+            #777777,
+            #444444
+        );
+
+    border: 2px solid #d0d0d0;
+
+    border-radius: 8px;
+}
+
+
+
+/* =========================================
+   SELECCIÓN
+========================================= */
+
+::selection {
+    color: #000000;
+
+    background: #00ffff;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .page {
+        width: calc(100% - 20px);
+        max-width: none;
+    }
+
+    .profile-grid {
+        grid-template-columns: 340px 1fr;
+
+        gap: 15px;
+    }
+
+    .profile-summary {
+        grid-template-columns: 165px 1fr;
+    }
+
+    .profile-image {
+        width: 165px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .page {
+        width: 100%;
+    }
+
+    .header {
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-summary {
+        grid-template-columns: 195px 1fr;
+    }
+
+    .profile-image {
+        width: 195px;
+    }
+
+    .search-area {
+        display: none;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .content {
+        padding: 14px 8px 30px;
+    }
+
+    .profile-summary {
+        grid-template-columns: 130px 1fr;
+    }
+
+    .profile-image {
+        width: 130px;
+        height: 160px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px 10px;
+    }
+
+    .navigation {
+        line-height: 20px;
+    }
+
+}
